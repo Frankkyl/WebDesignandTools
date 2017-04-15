@@ -1,2 +1,2 @@
 # WebDesignandTools
-for my web project practices
+for my web projects

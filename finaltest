@@ -120,14 +120,26 @@ CSS
  
 JavaScript:
 1. What is the difference between == and ===?
+   A:== only compares values;=== compares values + type
 2. Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5
 3. What tools and techniques do you use debugging JavaScript code?
+   A:
 4. Some coding question that use the concept of loops, conditions, dom manipulation,data structures etc. eg. Write a program to sort an array containing only 1's and 0’s , by only iterating it once , and not using extra memory
 5. What are JavaScript types?
+   A:JavaScript variables can hold many data types: numbers, strings, objects and more
 6. What is ‘this’ keyword in JavaScript?
+   A:In JavaScript, ‘this’ normally refers to the object which ‘owns’ the method, but it depends on how a function is called.
+   If there’s no current object, ‘this’ refers to the global object.
+   ??
 7. How generic objects can be created?
 8. Explain window.onload and onDocumentReady?
+   A:The ready event occurs after the HTML document has been loaded, while the onload event occurs later, when all content (e.g. images) also has been loaded.
+    The onload event is a standard event in the DOM, while the ready event is specific to jQuery. The purpose of the ready event is that it should occur 
+    as early as possible after the document has loaded, so that code that adds functionality to the elements in the page doesn't have to wait for all content to load.
 9. Define event bubbling?
+   A:Event bubbling and capturing are two ways of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. 
+   The event propagation mode determines in which order the elements receive the event.
 10. How to set a cookie?
+   A:
 11. How to store objects in local storage?
 12. Pros and cons of using cookie vs local storage	 

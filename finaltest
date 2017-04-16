@@ -1,0 +1,133 @@
+HTML
+1. What does a doctype do?
+  A:A DOCTYPE is a required preamble. DOCTYPEs are required for legacy reasons. When omitted, browsers tend to use a different
+  rendering mode that is incompatible with some specifications. Including the DOCTYPE in a document ensures that the browser 
+  makes a best-effort attempt at following the relevant specifications.
+2. What is “Semantic HTML?”
+  A:A semantic element clearly describes its meaning to both the browser and the developer.
+  Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+  Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+3. How many HTML tags are should be used for the most simple of web pages?
+  A:<HTML> <HEAD> <TITLE>Simplest page ever!</TITLE> </HEAD> <BODY> Doesn’t get simpler than this. </BODY> </HTML>
+4. What is the difference between linking to an image, a website, and an email address?
+  A:To link an image use < img> tags. You need specify the image in quotes using the source attribute, src in the opening tag.
+    For hyperlinking, the anchor tag, < a> , is used and the link is specified in the href attribute. 
+    Text to be hyperlinked should be placed between the anchor tags. Little known fact: href stands for “hypertext reference.”
+5. Consider HTML5 as an open web platform. What are the building blocks of HTML5?
+  A:The main building blocks are centred on HTML 5, CSS3, Javascript and SVG. Where HTML is a language to define the mark-up
+  of a document (titles, headers, body, footer, tables, input forms etc.), CSS is a language to define style (formatting, 
+  colours, shades and the like). Javascript is a programming/scripting language and SVG is a language for creating 2D scalable
+  vector graphics and images. ref:http://yucianga.info/?p=655
+6. What are some new HTML5 markup elements?
+  A:1.<video> and <audio> 2.<input>type attributes 3.<canvas> 4.<header>and<footer> 5.<article>and<section> 6.<output>
+  7.<details> 8.<figure>and<figcaption> 9.<progress>and<meter> 10.<datalist>
+  refer:http://www.techrepublic.com/blog/10-things/10-new-html5-tags-you-need-to-know-about/
+7. What are the new media-related elements in HTML5?
+  A:<audio>	Defines sound content
+    <video>	Defines a video or movie
+    <source>	Defines multiple media resources for <video> and <audio>
+    <embed>	Defines a container for an external application or interactive content (a plug-in)
+    <track>	Defines text tracks for <video> and <audio>
+8. What is the difference between SVG and <Canvas>?
+  A:SVG is an earlier standard for drawing shapes in browsers. However, SVG is at a fundamentally higher level because 
+  each drawn shape is remembered as an object in a scene graph or DOM, which is subsequently rendered to a bit map. 
+  This means that if attributes of an SVG object are changed, the browser can automatically re-render the scene.
+  Conceptually, canvas is a lower level protocol upon which SVG might be built.However, this is not (normally) the case
+  —they are independent standards. The situation is complicated because there are scene graph libraries for Canvas, 
+  and SVG has some bit map manipulation functionality.
+9. Describe the difference between a cookie, sessionStorage and localStorage.
+  A:They are all used to store data on the client side. Each one has its own storage and expiration limit.
+  localStorage: stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser Cache / Locally Stored Data
+    a.Max size of 2.5MBs+ depending on browser
+    b.Stored in browser and not sent with every request
+    c.Will persist if browser/tabs are closed
+  sessionStorage: similar to localStorage but expires when the browser closed (not the tab).
+    a.Max size of 2.5MBs+ depending on browser
+    b.Stored in browser and not sent with every request
+    c.If you close a tab using sessionStorage, open a new tab, or exit the browser - you'll lose that specific sessionStorage data.
+  Cookie: stores data that has to be sent back to the server with subsequent requests. Its expiration varies based on the type
+  and the expiration duration can be set from either server-side or client-side (normally from server-side).
+    Max size of 4093 bytes
+    Can set expiration date
+    Sent on every request
+  Cookies are primarily for server-side reading (can also be read on client-side), localStorage and sessionStorage can only be read on client-side.
+10. Why is it generally a good idea to position CSS <link>s between <head></head> and JS <script>s just before </body>? Do you know any exceptions?
+  A:You usually put the <link> tags in between the <head> to prevent Flash of Unstyled Content which gives the user something to look at while the rest of the page is being parsed.
+  Since Javascript blocks rendering by default, and the DOM and CSSOM construction can be also be delayed, it is usually best to keep scripts at the bottom of the page.
+  Exceptions are if you grab the scripts asynchronously, or at least defer them to the end of the page.
+11. What is progressive rendering?
+  A:With HTML progressive rendering is chunking the HTML into separate bits and loading each block as it's finished. 
+  Usually, the backend code loads the HTML at once, but if you flush after finishing one part of the structure, it can be rendered
+  immediately to the page.
+  This can be done asynchronously with different components being loaded as they finish. 
+  There's new features which can be used with Web Components making it more standard.
+12. What are some of the major new API’s that come standard with HTML5?	 
+  A:Media API, Text Track API, Application Cache API, User Interaction, Data Transfer API, Command API, 
+  Constraint Validation API, and the History API.
+ 
+CSS
+ 
+1. What is the difference between classes and IDs in CSS?
+  A:ID's are unique. Each element can have only one ID. Each page can have only one element with that ID
+    Classes are NOT unique. You can use the same class on multiple elements. You can use multiple classes on the same element.
+2. Describe Floats and how they work.
+  A:It's a box that is pulled to the left or right and let the following content flow along its side.
+  They are still in the flow of the page, but whereas the elements used to be stacked vertically, now they're side by side. 
+  Very commonly used for things like navigations.
+  Has an annoying collapsing effect on the parent container. Fixed by clearing the float in the container.
+3. Describe z-index and how stacking context is formed.
+  A:The z-index property in CSS controls the vertical stacking order of elements that overlap. As in, which one appears as if 
+  it is physically closer to you. z-index only effects elements that have a position value other than static (the default).
+  ??
+4. Describe Box model
+  A:The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. 
+  The box model allows us to add a border around elements, and to define space between elements. 
+5. What are your favourite image replacement techniques and which do you use when?
+  A:??
+6. How would you approach fixing browser-specific styling issues?
+  A:Use a separate stylesheet that only loads when that specific browser is being used. Thankfully, the days of IE specific stylesheets are almost gone.
+7. What are the different ways to visually hide content (and make it available only for screen readers)?
+  A:??
+8. What are some of the "gotchas" for writing efficient CSS?http://flowerszhong.github.io/2013/11/19/css-questions.html
+  A:Use efficient CSS selectors
+      Avoid a universal key selector.
+        Allow elements to inherit from ancestors, or use a class to apply a style to multiple elements.
+      Make your rules as specific as possible. 
+        Prefer class and ID selectors over tag selectors.
+      Remove redundant qualifiers. 
+        These qualifiers are redundant:
+          ID selectors qualified by class and/or tag selectors
+          Class selectors qualified by tag selectors (when a class is only used for one tag, which is a good design practice anyway).
+            Avoid using descendant selectors, especially those that specify redundant ancestors.
+              For example, the rule body ul li a {...} specifies a redundant body selector, since all elements are descendants of the body tag.
+            Use class selectors instead of descendant selectors.
+    Avoid CSS expressions
+    Put CSS in the document head
+9. What are the advantages/disadvantages of using LESS preprocessors?
+  A:??
+10. Describe pseudo-elements and discuss what they are used for.
+11. List as many values for the display property that you can remember.
+12. What's the difference between inline and inline-block?
+13. What's the difference between a relative, fixed, absolute and statically positioned element?
+14. The 'C' in CSS stands for Cascading. How is priority determined in assigning styles (provide few examples)? How can you use this system to your advantage?
+15. Describe the difference between progressive enhancement and graceful degradation?
+16. What is flex-box ? How do you vertically center align content with and without flex-box ?
+17. What is responsive design all about?
+18. Few code exercises. eg Explain to me what's going on in this CSS selector:	[role=navigation] > ul a:not([href^=mailto]) {}	
+19. Create a 4x4 responsive grid
+20. What benefits and demerits do External Style Sheets have? 	 
+ 
+ 
+JavaScript:
+1. What is the difference between == and ===?
+2. Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5
+3. What tools and techniques do you use debugging JavaScript code?
+4. Some coding question that use the concept of loops, conditions, dom manipulation,data structures etc. eg. Write a program to sort an array containing only 1's and 0’s , by only iterating it once , and not using extra memory
+5. What are JavaScript types?
+6. What is ‘this’ keyword in JavaScript?
+7. How generic objects can be created?
+8. Explain window.onload and onDocumentReady?
+9. Define event bubbling?
+10. How to set a cookie?
+11. How to store objects in local storage?
+12. Pros and cons of using cookie vs local storage	 
